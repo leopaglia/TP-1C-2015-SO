@@ -1,0 +1,23 @@
+scp -rpC tp-2015-1c-souvenir-jackitos 192.168.3.129:/home/utnso
+
+curl -u 'leopaglia' -L -o tp-2015-1c-souvenir-jackitos.tar https://api.github.com/repos/sisoputnfrba/tp-2015-1c-souvenir-jackitos/tarball/master
+
+NODO de 860: truncate -s 860M data.bin
+NODO de 1.6G: truncate -s 1639M data.bin
+NODO de 1G: truncate -s 1G data.bin
+NODO de 2G: truncate -s 2G data.bin
+
+tp-2015-1c-souvenir-jackitos
+
+tar -xvf
+
+Mongo:
+wget https://github.com/mongodb/mongo-c-driver/releases/download/1.1.10/mongo-c-driver-1.1.10.tar.gz
+tar -xzf mongo-c-driver-1.1.10.tar.gz
+cd mongo-c-driver-1.1.10/
+
+./configure --prefix=/usr --libdir=/usr/lib
+
+make
+
+sudo make install
